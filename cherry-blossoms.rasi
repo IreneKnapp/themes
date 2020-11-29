@@ -1,0 +1,126 @@
+/*********************
+ *  Cherry Blossoms  *
+ *  Irene Knapp      *
+ *********************/
+
+* {
+  font: "Fantasque Sans Mono 48";
+
+  border: 0;
+  padding: 0;
+  spacing: 0;
+
+  foreground:                  rgba ( 92, 1, 190, 100 % );
+  background:                  rgba ( 253, 229, 249, 100 % );
+  normal-foreground:           @foreground;
+  normal-background:           @background;
+  active-foreground:           rgba ( 101, 172, 255, 100 % );
+  active-background:           rgba ( 29, 31, 33, 17 % );
+  urgent-foreground:           rgba ( 204, 102, 102, 100 % );
+  urgent-background:           rgba ( 29, 31, 33, 17 % );
+
+  alternate-normal-foreground: @foreground;
+  alternate-normal-background: rgba ( 230, 253, 250, 100 % );
+  alternate-active-foreground: @active-foreground;
+  alternate-active-background: rgba ( 75, 81, 96, 89 % );
+  alternate-urgent-foreground: @urgent-foreground;
+  alternate-urgent-background: rgba ( 75, 81, 96, 90 % );
+
+  selected-normal-foreground:  @foreground;
+  selected-normal-background:  rgba ( 255, 255, 165, 100 % );
+  selected-active-foreground:  rgba ( 249, 249, 249, 100 % );
+  selected-active-background:  rgba ( 68, 145, 237, 100 % );
+  selected-urgent-foreground:  rgba ( 249, 249, 249, 100 % );
+  selected-urgent-background:  rgba ( 165, 66, 66, 100 % );
+
+  red:                         rgba ( 220, 50, 47, 100 % );
+  blue:                        rgba ( 38, 139, 210, 100 % );
+  lightbg:                     rgba ( 238, 232, 213, 100 % );
+  lightfg:                     rgba ( 88, 104, 117, 100 % );
+
+  text-color:                  @foreground;
+  background-color:            @background;
+  separatorcolor:              @foreground;
+  border-color:                @separatorcolor;
+}
+
+#window {
+  border: 1em;
+  padding: 1em;
+}
+
+#message, listview {
+  border: 0.125em 0 0;
+}
+
+#message {
+  padding: 0.5em 0;
+}
+
+#listview {
+  padding: 0.5em 0 0;
+  scrollbar: false;
+}
+
+#element {
+  padding: 0.125em 0;
+}
+
+#element.normal.normal {
+  background-color: @normal-background;
+  text-color:       @normal-foreground;
+}
+#element.normal.urgent {
+  background-color: @urgent-background;
+  text-color:       @urgent-foreground;
+}
+#element.normal.active {
+  background-color: @active-background;
+  text-color:       @active-foreground;
+}
+#element.selected.normal {
+  background-color: @selected-normal-background;
+  text-color:       @selected-normal-foreground;
+}
+#element.selected.urgent {
+  background-color: @selected-urgent-background;
+  text-color:       @selected-urgent-foreground;
+}
+#element.selected.active {
+  background-color: @selected-active-background;
+  text-color:       @selected-active-foreground;
+}
+#element.alternate.normal {
+  background-color: @alternate-normal-background;
+  text-color:       @alternate-normal-foreground;
+}
+#element.alternate.urgent {
+  background-color: @alternate-urgent-background;
+  text-color:       @alternate-urgent-foreground;
+}
+#element.alternate.active {
+  background-color: @alternate-active-background;
+  text-color:       @alternate-active-foreground;
+}
+
+#scrollbar {
+  handle-color: @normal-foreground;
+  handle-width: 0.5em;
+  padding: 0 0 0 0.25em;
+}
+
+#button.selected {
+  background-color: @selected-normal-background;
+  text-color:       @selected-normal-foreground;
+}
+
+#inputbar {
+  padding: 0 0 0.25em;
+  children: [ prompt, textbox-prompt-colon, entry, case-indicator ];
+}
+
+#textbox-prompt-colon {
+  expand: false;
+  str: ":";
+  margin: 0px 0.3em 0em 0em;
+}
