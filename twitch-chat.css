@@ -1,0 +1,35 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+html.tw-root--theme-dark body,
+html.tw-root--theme-light body {
+  --color-background-base: #fde5f9 !important;
+  --color-background-body: #fde5f9 !important;
+  --color-text-base: #5c01be !important;
+  --font-base: 'Fantasque Sans Mono';
+  --font-display: 'Fantasque Sans Mono';
+  --font-mono: 'Fantasque Sans Mono';
+  --font-size-base: 18pt;
+
+}
+
+.tw-root--theme-dark .chat-room,
+.tw-root--theme-light .chat-room {
+  background-color: var(--color-background-base);
+}
+
+.tw-root--theme-dark .chat-line__moderation,
+.tw-root--theme-dark .chat-line__status,
+.tw-root--theme-light .chat-line__moderation,
+.tw-root--theme-light .chat-line__status {
+  color: var(--color-text-base);
+}
+
+.chat-input.tw-block,
+.stream-chat-header.tw-flex,
+.chat-line__message.tw-flex {
+  display: none !important;
+
+}
